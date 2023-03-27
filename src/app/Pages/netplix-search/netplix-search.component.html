@@ -1,0 +1,12 @@
+<app-netplix-navbar />
+
+<app-netplix-search-movie />
+
+<div *ngIf="this.movieService.searchMovieInput?.length == 0">
+    <h1 class="not-fund">
+        There are no movies that matched your query.
+    </h1>
+</div>
+
+
+<app-netplix-movie></app-netplix-movie>
