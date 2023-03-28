@@ -30,7 +30,6 @@
 .img__container {
     width: 400px;
     height: 220px;
-    background-color: red;
 
 }
 
@@ -66,4 +65,27 @@
     -webkit-box-orient: vertical;  
     overflow: hidden;
 
+}
+
+
+@media screen and (max-width:1020px) {
+    
+    .movie__container
+    {
+        flex-direction: column;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .img__container
+    {
+        width: 100%;
+        height: auto;
+
+    }
+
+    .img__container img
+    {
+        width: 100%;
+    }
 }
