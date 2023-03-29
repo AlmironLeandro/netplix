@@ -23,7 +23,7 @@
 }
 
 .movie {
-    
+
     display: flex;
     position: relative;
     width: 80%;
@@ -67,4 +67,25 @@
 .box__header p {
     font-size: 20px;
     margin-right: 20px;
+}
+
+@media screen and (max-width:760px) {
+    .movie {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+
+    .container {
+        height: auto;
+    }
+
+    .movie__content {
+        margin-left: 0;
+        margin: 10px;
+        height: auto;
+    }
+    .movie__img {
+       margin-top: 30px;
+    }
 }
