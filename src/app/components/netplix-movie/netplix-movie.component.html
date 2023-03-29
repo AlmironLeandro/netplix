@@ -1,5 +1,5 @@
-<div *ngFor="let movie of this.movies.searchMovieInput" >
-    <div class="container" >
+<div *ngFor="let movie of this.movies.searchMovieInput">
+    <div class="container" (click)="showMovie(movie.id)">
         <div class="movie__container">
             <div class="img__container">
                 <img *ngIf=" movie.backdrop_path || movie.poster_path"

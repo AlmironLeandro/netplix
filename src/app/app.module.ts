@@ -8,6 +8,9 @@ import { NetplixShowMovieComponent } from './Pages/netplix-show-movie/netplix-sh
 import { NetplixNavbarComponent } from './components/netplix-navbar/netplix-navbar.component';
 import { NetplixSearchMovieComponent } from './components/netplix-search-movie/netplix-search-movie.component';
 import { NetplixMovieComponent } from './components/netplix-movie/netplix-movie.component';
+import { M2hPipe } from './pipe/m2h.pipe';
+import { IntPercentPipe } from './pipe/int-percent.pipe';
+
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { NetplixMovieComponent } from './components/netplix-movie/netplix-movie.
     NetplixShowMovieComponent,
     NetplixNavbarComponent,
     NetplixSearchMovieComponent,
-    NetplixMovieComponent
+    NetplixMovieComponent,
+    M2hPipe,
+    IntPercentPipe,
+
   ],
   imports: [
     BrowserModule,

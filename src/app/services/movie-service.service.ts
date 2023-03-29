@@ -15,11 +15,35 @@ export class MovieServiceService {
     const query = `&query=${text}`
     try {
       const res = await axios.get(api + query)
-      this.searchMovieInput = res.data.results     
+      this.searchMovieInput = res.data.results
       console.log(this.searchMovieInput);
-       
+
     } catch (error) {
       console.log(error);
     }
   }
+
+
+  async getMovieById(id: string) {
+    const api = environment.movieUrl + id + '?api_key=' + environment.api_id + '&language=en-US'
+    try {
+      const res = await axios.get(api)
+      return res.data
+
+    } catch (error) {
+      return error
+    }
+  }
+
+  async getPoster(id: string) {
+    const api = environment.movieUrl + id + '/images?api_key=' + environment.api_id
+    try {
+      const res = await axios.get(api)
+      return res.data
+
+    } catch (error) {
+      return error
+    }
+  }
 }
+
